@@ -1,7 +1,7 @@
 services:
-  postgres-oltp:
+  postgres-crm:
     image: postgres
-    container_name: global-retail-postgres-oltp
+    container_name: global-retail-postgres-crm
     environment:
       POSTGRES_USER: ${POSTGRES_OLTP_USER}
       POSTGRES_PASSWORD: ${POSTGRES_OLTP_PASSWORD}
@@ -11,18 +11,18 @@ services:
     volumes:
       - oltp_data:/var/lib/postgresql/data
 
-  postgres-olap:
+  postgres-dw:
     image: postgres
-    container_name: global-retail-postgres-olap
+    container_name: global-retail-postgres-dw
     environment:
       POSTGRES_USER: ${POSTGRES_OLAP_USER}
       POSTGRES_PASSWORD: ${POSTGRES_OLAP_PASSWORD}
       POSTGRES_DB: ${POSTGRES_OLAP_DB}
     ports:
-      - "${POSTGRES_OLAP_PORT}:5433"
+      - "${POSTGRES_OLAP_PORT}:5432"
     volumes:
       - olap_data:/var/lib/postgresql/data
-      
+
 volumes:
   oltp_data:
   olap_data:

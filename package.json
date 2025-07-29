@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/main.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +12,14 @@
   "packageManager": "pnpm@10.7.1",
   "devDependencies": {
     "@types/node": "^24.1.0",
+    "@types/pg": "^8.15.4",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "pg": "^8.16.3",
+    "tsconfig-paths": "^4.2.0"
   }
 }
