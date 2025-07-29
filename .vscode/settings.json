@@ -1,0 +1,8 @@
+{
+  "files.exclude": {
+    "**/src/scripts/crm/inserts.sql": true
+  },
+  "search.exclude": {
+    "**/src/scripts/crm/inserts.sql": true
+  }
+}
